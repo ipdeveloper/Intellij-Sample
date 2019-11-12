@@ -1,47 +1,39 @@
 package org.dpdouran.gxt.shared.model;
 
+import com.extjs.gxt.ui.client.data.BaseModel;
+import com.extjs.gxt.ui.client.data.BeanModel;
+import com.extjs.gxt.ui.client.data.BeanModelTag;
+
 import java.io.Serializable;
 
+
+
 @SuppressWarnings("serial")
-public class Feed implements Serializable {
-	private String description;
-	private String link;
-	private String title;
-	private String uuid;
-
-	public Feed() {
-
+public class Feed   extends BaseModel {
+	public Feed () {
 	}
-
-	public Feed(String uuid) {
-		this.uuid = uuid;
+	public Feed (String uuid) {
+		set("uuid", uuid);
 	}
-
 	public String getDescription() {
-		return description;
+		return get("description");
 	}
-
 	public String getLink() {
-		return link;
+		return get("link");
 	}
-
 	public String getTitle() {
-		return title;
+		return get("title");
 	}
-
 	public String getUuid() {
-		return uuid;
+		return get("uuid");
 	}
-
 	public void setDescription(String description) {
-		this.description = description;
+		set("description", description);
 	}
-
 	public void setLink(String link) {
-		this.link = link;
+		set("link", link);
 	}
-
 	public void setTitle(String title) {
-		this.title = title;
+		set("title", title);
 	}
 }

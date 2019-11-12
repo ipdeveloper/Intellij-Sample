@@ -1,7 +1,9 @@
 package org.dpdouran.gxt.client;
 
 import com.extjs.gxt.ui.client.event.EventType;
+import com.extjs.gxt.ui.client.widget.layout.FitLayout;
 import org.dpdouran.gxt.client.components.LinkFeedPopup;
+import org.dpdouran.gxt.client.lists.FeedList;
 import org.dpdouran.gxt.client.services.FeedServiceAsync;
 import org.dpdouran.gxt.client.window.FeedWindow;
 import org.dpdouran.gxt.shared.model.Feed;
@@ -58,6 +60,8 @@ public class RssNavigationPanel extends ContentPanel {
         createNewToolTipConfig.setText("Creates a new RSS feed");
         btnCreateFeed.setToolTip(createNewToolTipConfig);
         addButton(btnCreateFeed);
+        setLayout(new FitLayout());
+        add(new FeedList());
 
     }
 
