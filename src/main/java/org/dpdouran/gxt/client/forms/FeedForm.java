@@ -45,6 +45,7 @@ public class FeedForm extends FormPanel {
         feedService.saveFeed(feed, new AsyncCallback<Void>() {
             @Override
             public void onFailure(Throwable caught) {
+                caught.printStackTrace();
                 Info.display("RSS Reader", "Failed to save feed: "
                         + feed.getTitle());
             }
@@ -53,8 +54,9 @@ public class FeedForm extends FormPanel {
             public void onSuccess(Void result) {
                 final ListStore<BeanModel> feedStore = Registry
                         .get(RSSReaderConstants.FEED_STORE);
+                BeanModelLookup beanModelLookup = BeanModelLookup.get();
                 BeanModelFactory beanModelFactory =
-                        BeanModelLookup.get().getFactory(feed.getClass());
+                        beanModelLookup.getFactory(feed.getClass());
                 feedStore.add(beanModelFactory.createModel(feed));
                 Info.display("RSS Reader", "Feed " +
                         feed.getTitle()

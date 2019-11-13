@@ -1,7 +1,8 @@
-package org.dpdouran.gxt.client;
+package org.dpdouran.gxt.client.components;
 
 import com.extjs.gxt.ui.client.event.EventType;
 import com.extjs.gxt.ui.client.widget.layout.FitLayout;
+import org.dpdouran.gxt.client.RSSReaderConstants;
 import org.dpdouran.gxt.client.components.LinkFeedPopup;
 import org.dpdouran.gxt.client.lists.FeedList;
 import org.dpdouran.gxt.client.services.FeedServiceAsync;
@@ -24,7 +25,7 @@ public class RssNavigationPanel extends ContentPanel {
     final LinkFeedPopup linkFeedPopup = new LinkFeedPopup();
 
     public RssNavigationPanel() {
-        setHeading("Navigation");
+//        setHeading("Navigation");
         final Button btnLinkFeed = new Button("Link feed");
         btnLinkFeed.setIconStyle("link-feed");
         setButtonAlign(HorizontalAlignment.LEFT);

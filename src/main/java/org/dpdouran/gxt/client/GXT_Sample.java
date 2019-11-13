@@ -1,5 +1,7 @@
 package org.dpdouran.gxt.client;
 
+import org.dpdouran.gxt.client.services.GreetingService;
+import org.dpdouran.gxt.client.services.GreetingServiceAsync;
 import org.dpdouran.gxt.shared.FieldVerifier;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;

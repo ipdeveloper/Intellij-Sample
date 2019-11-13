@@ -1,6 +1,6 @@
 package org.dpdouran.gxt.server;
 
-import org.dpdouran.gxt.client.GreetingService;
+import org.dpdouran.gxt.client.services.GreetingService;
 import org.dpdouran.gxt.shared.FieldVerifier;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 

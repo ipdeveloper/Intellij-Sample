@@ -14,7 +14,7 @@ public class FeedWindow extends Window {
 	private final FeedForm feedForm = new FeedForm();
 
 	public FeedWindow(final Feed feed) {
-		setHeading("Feed");
+//		setHeading("Feed");
 		setWidth(350);
 		setHeight(200);
 
